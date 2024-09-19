@@ -1,9 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\max\\source\\repos\\ConsoleApp1\\",
+  "WorkspaceRootPath": "P:\\Users\\CC\\Documents\\git\\server_app\\server_app\\ConsoleApp1\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7EDF0070-86E3-458B-8998-17D3D4EBDF6E}|ConsoleApp1\\ConsoleApp1.csproj|c:\\users\\max\\source\\repos\\consoleapp1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{7EDF0070-86E3-458B-8998-17D3D4EBDF6E}|ConsoleApp1\\ConsoleApp1.csproj|p:\\users\\cc\\documents\\git\\server_app\\server_app\\consoleapp1\\consoleapp1\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EDF0070-86E3-458B-8998-17D3D4EBDF6E}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\service\\userservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EDF0070-86E3-458B-8998-17D3D4EBDF6E}|ConsoleApp1\\ConsoleApp1.csproj|p:\\users\\cc\\documents\\git\\server_app\\server_app\\consoleapp1\\consoleapp1\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7EDF0070-86E3-458B-8998-17D3D4EBDF6E}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\repository\\userrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7EDF0070-86E3-458B-8998-17D3D4EBDF6E}|ConsoleApp1\\ConsoleApp1.csproj|p:\\users\\cc\\documents\\git\\server_app\\server_app\\consoleapp1\\consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7EDF0070-86E3-458B-8998-17D3D4EBDF6E}|ConsoleApp1\\ConsoleApp1.csproj|solutionrelative:consoleapp1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -14,15 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UserRepository.cs",
+              "DocumentMoniker": "P:\\Users\\CC\\Documents\\git\\server_app\\server_app\\ConsoleApp1\\ConsoleApp1\\Repository\\UserRepository.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Repository\\UserRepository.cs",
+              "ToolTip": "P:\\Users\\CC\\Documents\\git\\server_app\\server_app\\ConsoleApp1\\ConsoleApp1\\Repository\\UserRepository.cs",
+              "RelativeToolTip": "ConsoleApp1\\Repository\\UserRepository.cs",
+              "ViewState": "AQIAADUAAAAAAAAAAAAlwEYAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T16:36:41.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "UserService.cs",
+              "DocumentMoniker": "P:\\Users\\CC\\Documents\\git\\server_app\\server_app\\ConsoleApp1\\ConsoleApp1\\Service\\UserService.cs",
+              "RelativeDocumentMoniker": "ConsoleApp1\\Service\\UserService.cs",
+              "ToolTip": "P:\\Users\\CC\\Documents\\git\\server_app\\server_app\\ConsoleApp1\\ConsoleApp1\\Service\\UserService.cs",
+              "RelativeToolTip": "ConsoleApp1\\Service\\UserService.cs",
+              "ViewState": "AQIAAHkAAAAAAAAAAAAWwJAAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-15T16:34:49.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\max\\source\\repos\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "DocumentMoniker": "P:\\Users\\CC\\Documents\\git\\server_app\\server_app\\ConsoleApp1\\ConsoleApp1\\Program.cs",
               "RelativeDocumentMoniker": "ConsoleApp1\\Program.cs",
-              "ToolTip": "C:\\Users\\max\\source\\repos\\ConsoleApp1\\ConsoleApp1\\Program.cs",
+              "ToolTip": "P:\\Users\\CC\\Documents\\git\\server_app\\server_app\\ConsoleApp1\\ConsoleApp1\\Program.cs",
               "RelativeToolTip": "ConsoleApp1\\Program.cs",
               "ViewState": "AQIAADAAAAAAAAAAAAAowDEAAABJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",

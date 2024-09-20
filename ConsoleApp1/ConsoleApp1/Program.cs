@@ -41,23 +41,36 @@ namespace ConsoleApp2
             {
                 while (userId == 0)
                 {
-                    DirrectMessage("1 - Login\n2 - Register", client);
+                    //DirrectMessage("1 - Login\n2 - Register", client);
 
                     string response = ReadFromClient(client);
 
-                    switch (response)
-                    {
-                        case "1":
-                            userId = HandleLogin(client);
-                            break;
-                        case "2":
-                            userId = HandleRegister(client);
+                    if(response == null || response == "")
+                        continue;
 
-                            break;
-                        default:
-                            DirrectMessage("Invalid input. Disconnecting...", client);
-                            return;
+                    string[] parts = response.Split(' ');
+
+                    if (parts[0].Equals("Login"))
+                    {
+                        userId = HandleLogin(client, parts[1], parts[2]);
+                    }else if (parts[0].Equals("Register"))
+                    {
+                        userId = HandleRegister(client, parts[1], parts[2]);
                     }
+
+                    //switch (response)
+                    //{
+                    //    case "1":
+                    //        userId = HandleLogin(client);
+                    //        break;
+                    //    case "2":
+                    //        userId = HandleRegister(client);
+
+                    //        break;
+                    //    default:
+                    //        DirrectMessage("Invalid input. Disconnecting...", client);
+                    //        return;
+                    //}
                 }
                 var getUserByIdResponse = userController.GetUserById(userId);
 
@@ -99,7 +112,8 @@ namespace ConsoleApp2
 
                     foreach (MessageDTO item in messages)
                     {
-                        BroadcastMessage($"{item.User.Name}: {item.MessageText} {item.Time}", client);
+                        Console.WriteLine($"{item.User.Name}: {item.MessageText} {item.Time}|");
+                        DirrectMessage($"{item.User.Name}: {item.MessageText} {item.Time}|", client);
                     }
 
                     Console.WriteLine("End writing messages for connected");
@@ -147,48 +161,48 @@ namespace ConsoleApp2
             }
         }
 
-        private static int HandleLogin(TcpClient client)
+        private static int HandleLogin(TcpClient client, string username, string password)
         {
 
-            DirrectMessage("Enter username: ", client);
-            string enteredUsername = ReadFromClient(client);
+            //DirrectMessage("Enter username: ", client);
+            //string enteredUsername = ReadFromClient(client);
 
-            DirrectMessage("Enter password: ", client);
-            string enteredPassword = ReadFromClient(client);
+            //DirrectMessage("Enter password: ", client);
+            //string enteredPassword = ReadFromClient(client);
 
-            var response = userController.LoginUser(enteredUsername, enteredPassword);
+            var response = userController.LoginUser(username, password);
 
             if (!string.IsNullOrEmpty(response.errorMessage))
             {
-                DirrectMessage($"Error: {response.errorMessage}", client);
+                DirrectMessage($"Error {response.errorMessage}", client);
                 return 0;
             }
             else
             {
-                DirrectMessage("Login successful.", client);
+                DirrectMessage("Login successful", client);
                 return response.Obj;
             }
         }
 
-        private static int HandleRegister(TcpClient client)
+        private static int HandleRegister(TcpClient client, string username, string password)
         {
 
-            DirrectMessage("Enter username: ", client);
-            string enteredUsername = ReadFromClient(client);
+            //DirrectMessage("Enter username: ", client);
+            //string enteredUsername = ReadFromClient(client);
 
-            DirrectMessage("Enter password: ", client);
-            string enteredPassword = ReadFromClient(client);
+            //DirrectMessage("Enter password: ", client);
+            //string enteredPassword = ReadFromClient(client);
 
-            var response = userController.RegisterUser(enteredUsername, enteredPassword);
+            var response = userController.RegisterUser(username, password);
 
             if (!string.IsNullOrEmpty(response.errorMessage))
             {
-                DirrectMessage($"Error: {response.errorMessage}", client);
+                DirrectMessage($"Error {response.errorMessage}", client);
                 return 0;
             }
             else
             {
-                DirrectMessage("Registration successful.", client);
+                DirrectMessage("Registration successful", client);
                 return response.Obj;
             }
         }
@@ -215,11 +229,11 @@ namespace ConsoleApp2
             {
                 foreach (ClientInfo client in clients)
                 {
-                    if (client.Client != senderClient)
-                    {
+                    //if (client.Client != senderClient)
+                    //{
                         NetworkStream stream = client.Client.GetStream();
                         stream.Write(responseBytes, 0, responseBytes.Length);
-                    }
+                    //}
                 }
             }
         }

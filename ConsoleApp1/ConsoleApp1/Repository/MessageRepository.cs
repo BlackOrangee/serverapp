@@ -113,10 +113,10 @@ namespace ConsoleApp1.Repository
             {
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
-                    Console.WriteLine("Fetching messages...");
+                    //Console.WriteLine("Fetching messages...");
                     while (reader.Read())
                     {
-                        Console.WriteLine("Processing message...");
+                        //Console.WriteLine("Processing message...");
 
                         Message message = new Message(
                             reader.GetInt32("id"),
@@ -126,7 +126,7 @@ namespace ConsoleApp1.Repository
                         );
                         messages.Add(message);
                     }
-                    Console.WriteLine("End fetching messages...");
+                    //Console.WriteLine("End fetching messages...");
 
                 }
             }

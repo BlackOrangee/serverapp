@@ -93,9 +93,9 @@ namespace ConsoleApp2
                     clients.Add(clientInfo);
                 }
 
-                Console.WriteLine("Start getting messages for connected");
+                //Console.WriteLine("Start getting messages for connected");
                 var aLLMessagesResponse = messageController.GetAllMessages();
-                Console.WriteLine("End getting messages for connected");
+                //Console.WriteLine("End getting messages for connected");
 
                 if (!string.IsNullOrEmpty(aLLMessagesResponse.errorMessage))
                 {
